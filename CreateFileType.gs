@@ -7,7 +7,9 @@ function agregarPedidoPlanilla(
   telefonoResponsableUds
 ) {
   const id = generarIdAleatorio();
-//Example
+
+  //testing
+
   const range = sheetsFiles.getRange("A2:G2");
 
   range.clearContent();
