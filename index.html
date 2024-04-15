@@ -7,7 +7,7 @@
  <body>
     <main class="container">
       <h1 class="mb-5"> Sistema Gestor - MODALIDAD CDI. <br> 
-        Creador: PsyDev.- ALBERTO  MARIO GUERRERO GONZALEZ</h1>
+        PsyDev.- ALBERTO  MARIO GUERRERO GONZALEZ</h1>
       <div class="d-flex justify-content-between mb-3"> 
         <div class="col-3"> 
           <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
@@ -522,7 +522,7 @@
 <div class="row mb-3"> 
     <div class="col"> 
         <label for="unidadDeServicio">UDS:</label>
-        <input type="text" class="form-control" id="unidadDeServicio" name="unidadDeServicio" placeholder="Unidad de servicio..." value="CDI Contigo Con Todo" readonly>
+        <input type="text" class="form-control" id="unidadDeServicio" name="unidadDeServicio" placeholder="Unidad de servicio..." value="CDI " readonly>
     </div>
     <div class="col"> 
         <label for="grupoDeUds">Grupo:</label>
@@ -542,7 +542,7 @@
     </div>
     <div class="col"> 
         <label for="codeUDS">Codigo UDS:</label>
-        <input type="text" class="form-control" id="codeUDS" name="codeUDS" placeholder="Código UDS" readonly readonly value="CDI CONTIGO CON TODO">
+        <input type="text" class="form-control" id="codeUDS" name="codeUDS" placeholder="Código UDS" readonly readonly value="CDI ">
     </div>
 </div>
 
@@ -554,37 +554,37 @@ document.getElementById("grupoDeUds").addEventListener("change", function() {
     
       switch (grupoSelect.value) {
           case "SALA CUNA Y CAMINADORES":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL SALA CUNA & CAMINADORES";
+              codeUDSInput.value = "CDI - NIVEL SALA CUNA & CAMINADORES";
               break;
           case "PARVULOS I":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL PÁRVULOS I";
+              codeUDSInput.value = "CDI - NIVEL PÁRVULOS I";
               break;
           case "PARVULOS II":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL PÁRVULOS II";
+              codeUDSInput.value = "CDI - NIVEL PÁRVULOS II";
               break;
           case "PARVULOS III":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL PÁRVULOS III";
+              codeUDSInput.value = "CDI - NIVEL PÁRVULOS III";
               break;
           case "PRE JARDIN I":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL PRE-JARDÍN I";
+              codeUDSInput.value = "CDI - NIVEL PRE-JARDÍN I";
               break;
           case "PRE JARDIN II":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL PRE-JARDÍN II";
+              codeUDSInput.value = "CDI - NIVEL PRE-JARDÍN II";
               break;
           case "PRE JARDIN III":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL PRE-JARDÍN III";
+              codeUDSInput.value = "CDI - NIVEL PRE-JARDÍN III";
               break;
           case "JARDIN I":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL JARDÍN I";
+              codeUDSInput.value = "CDI - NIVEL JARDÍN I";
               break;
           case "JARDIN II":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL JADÍN II";
+              codeUDSInput.value = "CDI - NIVEL JADÍN II";
               break;
           case "JARDIN III":
-              codeUDSInput.value = "CDI CONTIGO CON TODO - NIVEL JARDÍN III";
+              codeUDSInput.value = "CDI - NIVEL JARDÍN III";
               break;
           default:
-              codeUDSInput.value = "CDI CONTIGO CON TODO";
+              codeUDSInput.value = "CDI ";
               break;
       }
 

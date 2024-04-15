@@ -1,5 +1,5 @@
 function doGet() {
-  const html = HtmlService.createTemplateFromFile("Index");
+  const html = HtmlService.createTemplateFromFile("index.html");
   const output = html.evaluate();
   return output;
 }
