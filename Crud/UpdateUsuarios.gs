@@ -146,7 +146,10 @@ function editarUsuario(form) {
   valoresActuales[129] = form.categoriaDiscapacidad;
   valoresActuales[130] = form.nivelDificultadDesempeno;
   valoresActuales[131] = form.descripcionDiscapacidad;
-
+  valoresActuales[132] = form.dxNutriUno;
+  valoresActuales[133] = form.dxNutriDos;
+  valoresActuales[134] = form.dxNutriTres;
+  
   // Establecer los nuevos valores en la hoja de cálculo
   rangoFila.setValues([valoresActuales]);
   console.log("Valores actuales despues de la actualización:", valoresActuales);
