@@ -293,6 +293,9 @@ dataUsuarios.forEach( usuario =>{
   const categoriaDiscapacidadCol = tr.querySelector(".template-categoria-discapacidad");
   const nivelDificultadDesempenoCol = tr.querySelector(".template-nivel-dificultad-desempeno");
   const descripcionDiscapacidadCol = tr.querySelector(".template-descripcion-discapacidad");
+  const dxNutriUnoCol = tr.querySelector(".template-diagnostico-nutricional-uno");
+  const dxNutriDosCol = tr.querySelector(".template-diagnostico-nutricional-dos");
+  const dxNutriTresCol = tr.querySelector(".template-diagnostico-nutricional-tres");
 
 
   const editButton = tr.querySelector(".button-edit");
@@ -449,7 +452,9 @@ dataUsuarios.forEach( usuario =>{
         categoriaDiscapacidadCol.textContent = usuario[130];
         nivelDificultadDesempenoCol.textContent = usuario[131];
         descripcionDiscapacidadCol.textContent = usuario[132];
-
+        dxNutriUnoCol.textContent = usuario[133];
+        dxNutriDosCol.textContent = usuario[134];
+        dxNutriTresCol.textContent = usuario[135];
     tableBody.appendChild(tr);
 
     }) 
@@ -604,7 +609,9 @@ const interdiccionSiNo = tableRow.cells[134].innerHTML; console.log("interdiccio
 const categoriaDiscapacidad = tableRow.cells[135].innerHTML; console.log("categoriaDiscapacidad", categoriaDiscapacidad);
 const nivelDificultadDesempeno = tableRow.cells[136].innerHTML; console.log("nivelDificultadDesempeno", nivelDificultadDesempeno);
 const descripcionDiscapacidad = tableRow.cells[137].innerHTML; console.log("descripcionDiscapacidad", descripcionDiscapacidad);
-
+const dxNutriUno =  tableRow.cells[138].innerHTML; console.log("DxNutriUno", dxNutriUno);
+const dxNutriDos =  tableRow.cells[139].innerHTML; console.log("DxNutriDos", dxNutriDos);
+const dxNutriTres =  tableRow.cells[140].innerHTML; console.log("DxNutriTres", dxNutriTres);
 
  const crearModal = bootstrap.Modal.getOrCreateInstance("#createModal")
   crearModal.show();
@@ -1015,6 +1022,15 @@ console.log("nivelDificultadDesempeno", nivelDificultadDesempeno);
 document.getElementById("descripcionDiscapacidad").value = descripcionDiscapacidad;
 console.log("descripcionDiscapacidad", descripcionDiscapacidad);
 
+document.getElementById("dxNutriUno").value = dxNutriUno;
+console.log("dxNutriUno", dxNutriUno);
+
+document.getElementById("dxNutriDos").value = dxNutriDos;
+console.log("dxNutriDos", dxNutriDos);
+
+document.getElementById("dxNutriTres").value = dxNutriTres;
+console.log("dxNutriTres", dxNutriTres);
+
 }
 
 
@@ -1083,6 +1099,8 @@ function almacenarInformacionAdicional() {
   const documentoResponsable = formAct.documentoResponsable.value;
   const mesEntrega = formAct.mesEntrega.value;
   const telefonoResponsableUds = formAct.telefonoResponsableUds.value;
+  const dateDeEntregaCompleta = formAct.dateDeEntregaCompleta.value;
+  const codigoAAVN = formAct.codigoAAVN.value;
 
   if (!kindFormat && !udsGroup && !mesEntrega  && !!docenteResponsable & !!documentoResponsable &!!telefonoResponsableUds) {
     window.alert('Upsss!!! 😮😮😮😮 por favor, selecciona tipo de planilla a descargar y grupo.');
@@ -1096,7 +1114,7 @@ function almacenarInformacionAdicional() {
       document.getElementById('botonesDescarga').style.display = 'block';
       // guardarQueryBtn.style.display = 'none'; 
     })
-    .agregarPedidoPlanilla(udsGroup, kindFormat, docenteResponsable, documentoResponsable, mesEntrega, telefonoResponsableUds);
+    .agregarPedidoPlanilla(udsGroup, kindFormat, docenteResponsable, documentoResponsable, mesEntrega, telefonoResponsableUds, dateDeEntregaCompleta, codigoAAVN );
 }
 
 function descargarArchivoPDF() {

@@ -4,13 +4,15 @@ function agregarPedidoPlanilla(
   docenteResponsable,
   documentoResponsable,
   mesEntrega,
-  telefonoResponsableUds
+  telefonoResponsableUds, 
+  dateDeEntregaCompleta, 
+  codigoAAVN
 ) {
   const id = generarIdAleatorio();
 
   //testing
 
-  const range = sheetsFiles.getRange("A2:G2");
+  const range = sheetsFiles.getRange("A2:I2");
 
   range.clearContent();
 
@@ -23,6 +25,8 @@ function agregarPedidoPlanilla(
       documentoResponsable,
       mesEntrega,
       telefonoResponsableUds,
+      dateDeEntregaCompleta, 
+      codigoAAVN
     ],
   ]);
 
