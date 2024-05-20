@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <base target="_top">
-  <?!= include('CSS') ?>
-</head>
-
-<body>
-  <main class="container">
-    <h3 class="mb-5"> Sistema Gestor Usuarios - MODALIDAD CDI. <br>
-      UDS: Contigo Con Todo (<span
-        style="font-weight: bold; text-decoration: underline; color: #f84109;">Fusagasugá</span>) - Fundación <span
-        style="color: green;">Social</span> <span style="color: red;">Vida</span>
-    </h3>
-
-    <div class="d-flex justify-content-between mb-3">
-      <div class="col-3">
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
-          <i class="bi bi-person-fill-add"></i> Agregar usuario
-        </button>
-      </div>
-
-      <div class="col-3">
-        <a href="https://sites.google.com/view/cdi-contigo-con-todo/home" class="btn btn-secondary"> Inicio <i
-            class="bi bi-house"></i></a>
-      </div>
+  <head>
+    <base target="_top">
+    <?!= include('CSS') ?>
+  </head>
+ <body>
+    <main class="container">
+      <h1 class="mb-5"> Sistema Gestor - MODALIDAD CDI. <br> 
+        PsyDev.- ALBERTO  MARIO GUERRERO GONZALEZ</h1>
+      <div class="d-flex justify-content-between mb-3"> 
+        <div class="col-3"> 
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
+            <i class="bi bi-person-fill-add"></i> Agregar usuario
+          </button>
+        </div>
+        
+        <div class="col-3"> 
+    <a href="https://sites.google.com/view/sistemalorenamoreno/home" class="btn btn-secondary"> Inicio <i class="bi bi-house"></i></a>
+</div>
 
 
       <div class="col-3">
@@ -546,35 +539,32 @@
 
             <body>
 
-              <div class="row mb-3">
-                <div class="col">
-                  <label for="unidadDeServicio">UDS:</label>
-                  <input type="text" class="form-control" id="unidadDeServicio" name="unidadDeServicio"
-                    placeholder="Unidad de servicio..." value="CDI CONTIGO CON TODO - FUSAGASUGÁ " readonly>
-                </div>
-                <div class="col">
-                  <label for="grupoDeUds">Grupo:</label>
-                  <select class="form-select" id="grupoDeUds" name="grupoDeUds">
-                    <option value="" disabled selected>Seleccione Grupo 😎</option>
-                    <option value="SALA CUNA Y CAMINADORES" style="background-color: #ffcccc;">SALA CUNA & CAMINADORES
-                    </option>
-                    <option value="PARVULOS I" style="background-color: #ffcc99;">PARVULOS I</option>
-                    <option value="PARVULOS II" style="background-color: #ffcc66;">PARVULOS II</option>
-                    <option value="PARVULOS III" style="background-color: #ffcc33;">PARVULOS III</option>
-                    <option value="PRE JARDIN I" style="background-color: #ffcc00;">PRE JARDIN I</option>
-                    <option value="PRE JARDIN II" style="background-color: #ccccff;">PRE JARDIN II</option>
-                    <option value="PRE JARDIN III" style="background-color: #cccccc;">PRE JARDIN III</option>
-                    <option value="JARDIN I" style="background-color: #cccc99;">JARDIN I</option>
-                    <option value="JARDIN II" style="background-color: #cccc66;">JARDIN II</option>
-                    <option value="JARDIN III" style="background-color: #cccc33;">JARDIN III</option>
-                  </select>
-                </div>
-                <div class="col">
-                  <label for="codeUDS">Codigo UDS:</label>
-                  <input type="text" class="form-control" id="codeUDS" name="codeUDS" placeholder="Código UDS" readonly
-                    readonly value="CDI ">
-                </div>
-              </div>
+<div class="row mb-3"> 
+    <div class="col"> 
+        <label for="unidadDeServicio">UDS:</label>
+        <input type="text" class="form-control" id="unidadDeServicio" name="unidadDeServicio" placeholder="Unidad de servicio..." value="CDI " readonly>
+    </div>
+    <div class="col"> 
+        <label for="grupoDeUds">Grupo:</label>
+        <select class="form-select" id="grupoDeUds" name="grupoDeUds">
+            <option value="" disabled selected>Seleccione Grupo 😎</option>
+         <option value="SALA CUNA Y CAMINADORES" style="background-color: #ffcccc;">SALA CUNA & CAMINADORES</option>
+          <option value="PARVULOS I" style="background-color: #ffcc99;">PARVULOS I</option>
+          <option value="PARVULOS II" style="background-color: #ffcc66;">PARVULOS II</option>
+          <option value="PARVULOS III" style="background-color: #ffcc33;">PARVULOS III</option>
+          <option value="PRE JARDIN I" style="background-color: #ffcc00;">PRE JARDIN I</option>
+          <option value="PRE JARDIN II" style="background-color: #ccccff;">PRE JARDIN II</option>
+          <option value="PRE JARDIN III" style="background-color: #cccccc;">PRE JARDIN III</option>
+          <option value="JARDIN I" style="background-color: #cccc99;">JARDIN I</option>
+          <option value="JARDIN II" style="background-color: #cccc66;">JARDIN II</option>
+          <option value="JARDIN III" style="background-color: #cccc33;">JARDIN III</option>
+        </select>
+    </div>
+    <div class="col"> 
+        <label for="codeUDS">Codigo UDS:</label>
+        <input type="text" class="form-control" id="codeUDS" name="codeUDS" placeholder="Código UDS" readonly readonly value="CDI ">
+    </div>
+</div>
 
               <script>
 
@@ -2585,105 +2575,86 @@
 
 
 
-  <!-- Modal DOWNLOADFILES -->
-  <div class="modal fade" id="downLoadModal" tabindex="-1" aria-labelledby="downLoadModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="downLoadModalLabel">DESCARGAR PLANILLAS. </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form name="crearPlanilla" id="crearPlanilla">
+<!-- Modal DOWNLOADFILES -->
+<div class="modal fade" id="downLoadModal" tabindex="-1" aria-labelledby="downLoadModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="downLoadModalLabel">DESCARGAR PLANILLAS. </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                    <form name="crearPlanilla" id="crearPlanilla">
+      
+      
+        <div class="col"> 
+          
+   <div class="col"> 
+        <label for="udsGroup">GRUPO:</label>
+        <select class="form-select" name="udsGroup" id="udsGroup">
+            <option value="" disabled selected>GRUPO 👪🏻 </option>
+            <option value="SALA CUNA Y CAMINADORES" style="background-color: #FFF4CC;">SALA CUNA Y CAMINADORES</option>
+            <option value="PARVULOS I" style="background-color: #CCE5FF;">PARVULOS I</option>
+            <option value="PARVULOS II" style="background-color: #CCE5FF;">PARVULOS II</option>
+            <option value="PARVULOS III" style="background-color: #CCE5FF;">PARVULOS III</option>
+            <option value="PRE JARDIN I" style="background-color: #FFCCCC;">PRE JARDIN I</option>
+            <option value="PRE JARDIN II" style="background-color: #FFCCCC;">PRE JARDIN II</option>
+            <option value="PRE JARDIN III"style="background-color: #FFCCCC;">PRE JARDIN III</option>
+            <option value="JARDIN I" style="background-color: #C5B1E5;">JARDIN I</option>
+            <option value="JARDIN II" style="background-color: #C5B1E5;">JARDIN II</option>
+            <option value="JARDIN III" style="background-color: #C5B1E5;">JARDIN III</option>
+        </select>
+  </div>
 
 
-    <div class="col">
-            <div class="col">
-                <label for="kindFormat">Tipo de Planilla:</label>
-                <select class="form-select" id="kindFormat" name="kindFormat">
-                  <option value="" disabled selected>📝Planilla✍🏿</option>
-            <optgroup label="PDF" style="background-color: #ba4639;">
-                  <option value="DIRECTORIO" style="background-color: #FFCCCC;">01.- DIRECTORIO BENEFICIARIOS - (PDF)
-                  </option>
-                  <option value="RAM" style="background-color: #FFCCCC;">02.- RAM - REGISTRO ASISTENCIA MENSUAL- (PDF)
-                  </option>
-                  <option value="AAVN" style="background-color: #FFCCCC;">03.- AAVN - BIENESTARINA - (PDF)</option>
-            </optgroup>
-            <optgroup label="Excel" style="background-color: #7e9e7e;">
-                  <option value="FORMATO DIRECTORIO EXCEL" style="background-color: #CCFFCC;">01.- FORMATO DIRECTORIO - (EXCEL) </option>
-                  <option value="FORMATO RAM EXCEL" style="background-color: #CCFFCC;">02.- FORMATO RAM - (EXCEL) </option>
-                  <option value="FORMATO BIENESTARINA EXCEL" style="background-color: #CCFFCC;">03.- AAVN BIENESTARINA- (EXCEL) </option>
-                  <option value="FORMATO CUENTAME" style="background-color: #CCFFCC;">04.- FORMATO CUENTAME - (EXCEL) </option>
-                  <option value="FORMATO TALLA & PESO" style="background-color: #CCFFCC;">05.- FORMATO TALLA & PESO - (EXCEL) </option>
-          </optgroup>
-                </select>
+    <div class="col"> 
+    <label for="kindFormat">Tipo de Planilla:</label>
+    <select class="form-select" id="kindFormat" name="kindFormat">
+        <option value="" disabled selected>📝Planilla✍🏿</option>  
+        <option value="DIRECTORIO" style="background-color: #FFCCCC;">DIRECTORIO BENEFICIARIOS - (PDF)</option> 
+        <option value="RAM" style="background-color: #FFCCCC;">RAM - REGISTRO ASISTENCIA MENSUAL- (PDF)</option> 
+        <option value="AAVN" style="background-color: #FFCCCC;">AAVN - BIENESTARINA - (PDF)</option> 
+        <option value="FORMATO TALLA & PESO" style="background-color: #CCFFCC;">FORMATO TALLA & PESO - (EXCEL) </option> 
+        <option value="FORMATO CUENTAME" style="background-color: #CCFFCC;">FORMATO CUENTAME - (EXCEL) </option> 
+    </select>
 </div>
 
-              <div class="col">
-                <label for="udsGroup">GRUPO:</label>
-                <select class="form-select" name="udsGroup" id="udsGroup">
-                  <option value="" disabled selected>GRUPO 👪🏻 </option>
-                  <option value="SALA CUNA Y CAMINADORES" style="background-color: #FFF4CC;">SALA CUNA Y CAMINADORES
-                  </option>
-                  <option value="PARVULOS I" style="background-color: #CCE5FF;">PARVULOS I</option>
-                  <option value="PARVULOS II" style="background-color: #CCE5FF;">PARVULOS II</option>
-                  <option value="PARVULOS III" style="background-color: #CCE5FF;">PARVULOS III</option>
-                  <option value="PRE JARDIN I" style="background-color: #FFCCCC;">PRE JARDIN I</option>
-                  <option value="PRE JARDIN II" style="background-color: #FFCCCC;">PRE JARDIN II</option>
-                  <option value="PRE JARDIN III" style="background-color: #FFCCCC;">PRE JARDIN III</option>
-                  <option value="JARDIN I" style="background-color: #C5B1E5;">JARDIN I</option>
-                  <option value="JARDIN II" style="background-color: #C5B1E5;">JARDIN II</option>
-                  <option value="JARDIN III" style="background-color: #C5B1E5;">JARDIN III</option>
-                </select>
-              </div>
+        
+       <div class="col"> 
+        <label for="docenteResponsable">Nombre del responsable</label>
+        <input type="text" class="form-control" id="docenteResponsable" name="docenteResponsable" placeholder="Nombre del responsable">
+      </div>        
 
-              <div class="col hidden" id="docenteResponsableContainer">
-                <label for="docenteResponsable">Nombre del responsable</label>
-                <input type="text" class="form-control" id="docenteResponsable" name="docenteResponsable"
-                  placeholder="Nombre del responsable">
-              </div>
+     <div class="col"> 
+      <label for="documentoResponsable">Documento del Responsable</label>
+      <input type="number" class="form-control" id="documentoResponsable" name="documentoResponsable" placeholder="Documento del responsable...">
+      </div>    
 
-              <div class="col hidden" id="documentoResponsableContainer">
-                <label for="documentoResponsable">Documento del Responsable</label>
-                <input type="number" class="form-control" id="documentoResponsable" name="documentoResponsable"
-                  placeholder="Documento del responsable...">
-              </div>
+        <div class="col"> 
+      <label for="telefonoResponsableUds">Telefono responsable grupo</label>
+      <input type="number" class="form-control" id="telefonoResponsableUds" name="telefonoResponsableUds" placeholder="Número 📱 responsable ...">
+      </div>        
 
-              <div class="col hidden" id="telefonoResponsableUdsContainer">
-                <label for="telefonoResponsableUds">Telefono responsable grupo</label>
-                <input type="number" class="form-control" id="telefonoResponsableUds" name="telefonoResponsableUds"
-                  placeholder="Número 📱 responsable ...">
-              </div>
 
-              <div class="col hidden" id="mesEntregaContainer" >
-                <label for="mesEntrega">Mes:</label>
-                <select class="form-select" id="mesEntrega" name="mesEntrega">
-                  <option value="" disabled selected> 📅 Mes entrega 📅 </option>
-                  <option value="ENERO" style="background-color: #000000; color: white;">01.- Enero</option>
-                  <option value="FEBRERO" style="background-color: #FFFFFF; color: black;">02.- Febrero</option>
-                  <option value="MARZO" style="background-color: #000000; color: white;">03.- Marzo</option>
-                  <option value="ABRIL" style="background-color: #FFFFFF; color: black;">04.- Abril</option>
-                  <option value="MAYO" style="background-color: #000000; color: white;">05.- Mayo</option>
-                  <option value="JUNIO" style="background-color: #FFFFFF; color: black;">06.- Junio</option>
-                  <option value="JULIO" style="background-color: #000000; color: white;">07.- Julio</option>
-                  <option value="AGOSTO" style="background-color: #FFFFFF; color: black;">08.- Agosto</option>
-                  <option value="SEPTIEMBRE" style="background-color: #000000; color: white;">09.- Septiembre</option>
-                  <option value="OCTUBRE" style="background-color: #FFFFFF; color: black;">10.- Octubre</option>
-                  <option value="NOVIEMBRE" style="background-color: #000000; color: white;">11.- Noviembre</option>
-                  <option value="DICIEMBRE" style="background-color: #FFFFFF; color: black;">12.- Diciembre</option>
-                </select>
-              </div>
 
-              <div class="col hidden" id="dateDeEntregaCompletaContainer">
-                <label for="dateDeEntregaCompleta">Fecha de entrega</label>
-                <input type="date" class="form-control" id="dateDeEntregaCompleta" name="dateDeEntregaCompleta">
-              </div>
-
-              <div class="col hidden" id="codigoAAVNContainer">
-                <label for="codigoAAVN">Código AAVN</label>
-                <input type="text" class="form-control" id="codigoAAVN" name="codigoAAVN">
-              </div>
-
+<div class="col">
+    <label for="mesEntrega">Mes de Entrega:</label>
+    <select class="form-select" id="mesEntrega" name="mesEntrega">
+      <option value="" disabled selected> 📅 Mes entrega 📅 </option>
+        <option value="ENERO" style="background-color: #000000; color: white;">01.- Enero</option>
+        <option value="FEBRERO" style="background-color: #FFFFFF; color: black;">02.- Febrero</option>
+        <option value="MARZO" style="background-color: #000000; color: white;">03.- Marzo</option>
+        <option value="ABRIL" style="background-color: #FFFFFF; color: black;">04.- Abril</option>
+        <option value="MAYO" style="background-color: #000000; color: white;">05.- Mayo</option>
+        <option value="JUNIO" style="background-color: #FFFFFF; color: black;">06.- Junio</option>
+        <option value="JULIO" style="background-color: #000000; color: white;">07.- Julio</option>
+        <option value="AGOSTO" style="background-color: #FFFFFF; color: black;">08.- Agosto</option>
+        <option value="SEPTIEMBRE" style="background-color: #000000; color: white;">09.- Septiembre</option>
+        <option value="OCTUBRE" style="background-color: #FFFFFF; color: black;">10.- Octubre</option>
+        <option value="NOVIEMBRE" style="background-color: #000000; color: white;">11.- Noviembre</option>
+        <option value="DICIEMBRE" style="background-color: #FFFFFF; color: black;">12.- Diciembre</option>
+    </select>
+</div>
 
 
           </form>
