@@ -1118,7 +1118,7 @@ document.getElementById('kindFormat').addEventListener('change', function() {
       docenteResponsableContainer.classList.remove('hidden');
       break;
     case 'RAM':
-    case 'FORMATO DIRECTORIO EXCEL':
+    case 'FORMATO RAM EXCEL':
       docenteResponsableContainer.classList.remove('hidden');
       documentoResponsableContainer.classList.remove('hidden');
       telefonoResponsableUdsContainer.classList.remove('hidden');
@@ -1157,28 +1157,28 @@ function almacenarInformacionAdicional() {
     case 'DIRECTORIO':
     case 'FORMATO DIRECTORIO EXCEL':
       if (!docenteResponsable || !mesEntrega) {
-        window.alert('Por favor, completa todos los campos obligatorios.');
+        window.alert('Upsss!!! 😮😮😮😮 por favor, completa todos los campos obligatorios: Planilla, grupo, docente o mes.');
         return;
       }
       break;
     case 'FORMATO TALLA & PESO':
     case 'FORMATO CUENTAME':
       if (!docenteResponsable) {
-        window.alert('Por favor, completa todos los campos obligatorios.');
+        window.alert('Upsss!!! 😮😮😮😮 por favor, completa todos los campos obligatorios: Planilla, grupo o docente.');
         return;
       }
       break;
       case 'RAM':
-      case 'FORMATO DIRECTORIO EXCEL':
+      case 'FORMATO RAM EXCEL':
       if (!docenteResponsable || !documentoResponsable || !telefonoResponsableUds || !mesEntrega) {
-        window.alert('Por favor, completa todos los campos obligatorios.');
+        window.alert('Upsss!!! 😮😮😮😮 por favor, completa todos los campos obligatorios: Planilla, grupo, docente, documento docente, telefono responsable y mes entrega.');
         return;
       }
       break;
     case 'AAVN':
     case 'FORMATO BIENESTARINA EXCEL':
       if (!docenteResponsable || !telefonoResponsableUds || !mesEntrega || !dateDeEntregaCompleta || !codigoAAVN) {
-        window.alert('Por favor, completa todos los campos obligatorios.');
+        window.alert('Upsss!!! 😮😮😮😮 por favor, completa todos los campos obligatorios: Planilla, grupo, docente, documento docente, telefono responsable y mes entrega, fecha de entrega y codigo del AAVN');
         return;
       }
       break;
