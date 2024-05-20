@@ -1090,6 +1090,51 @@ function loadingOnOff () {
   document.querySelector('#loadingButton').classList.toggle("d-none")
 } 
 
+document.getElementById('kindFormat').addEventListener('change', function() {
+  var docenteResponsableContainer = document.getElementById('docenteResponsableContainer');
+  var documentoResponsableContainer = document.getElementById('documentoResponsableContainer');
+  var telefonoResponsableUdsContainer = document.getElementById('telefonoResponsableUdsContainer');
+  var mesEntregaContainer = document.getElementById('mesEntregaContainer');
+  var dateDeEntregaCompletaContainer = document.getElementById('dateDeEntregaCompletaContainer');
+  var codigoAAVNContainer = document.getElementById('codigoAAVNContainer');
+
+  // Hide all fields initially
+  docenteResponsableContainer.classList.add('hidden');
+  documentoResponsableContainer.classList.add('hidden');
+  telefonoResponsableUdsContainer.classList.add('hidden');
+  mesEntregaContainer.classList.add('hidden');
+  dateDeEntregaCompletaContainer.classList.add('hidden');
+  codigoAAVNContainer.classList.add('hidden');
+
+
+  switch (this.value) {
+    case 'DIRECTORIO':
+    case 'FORMATO DIRECTORIO EXCEL':
+      docenteResponsableContainer.classList.remove('hidden');
+      mesEntregaContainer.classList.remove('hidden');
+      break;
+    case 'FORMATO TALLA & PESO':
+    case 'FORMATO CUENTAME':
+      docenteResponsableContainer.classList.remove('hidden');
+      break;
+    case 'RAM':
+    case 'FORMATO DIRECTORIO EXCEL':
+      docenteResponsableContainer.classList.remove('hidden');
+      documentoResponsableContainer.classList.remove('hidden');
+      telefonoResponsableUdsContainer.classList.remove('hidden');
+      mesEntregaContainer.classList.remove('hidden');
+      break;
+    case 'AAVN':
+    case 'FORMATO BIENESTARINA EXCEL':
+      docenteResponsableContainer.classList.remove('hidden');
+      telefonoResponsableUdsContainer.classList.remove('hidden');
+      mesEntregaContainer.classList.remove('hidden');
+      dateDeEntregaCompletaContainer.classList.remove('hidden');
+      codigoAAVNContainer.classList.remove('hidden');
+      break;
+  }
+});
+
 
 function almacenarInformacionAdicional() {
   const formAct = document.getElementById('crearPlanilla');
@@ -1102,9 +1147,41 @@ function almacenarInformacionAdicional() {
   const dateDeEntregaCompleta = formAct.dateDeEntregaCompleta.value;
   const codigoAAVN = formAct.codigoAAVN.value;
 
-  if (!kindFormat && !udsGroup && !mesEntrega  && !!docenteResponsable & !!documentoResponsable &!!telefonoResponsableUds) {
+  if (!kindFormat && !udsGroup) {
     window.alert('Upsss!!! 😮😮😮😮 por favor, selecciona tipo de planilla a descargar y grupo.');
     return;
+  }
+
+
+  switch (kindFormat) {
+    case 'DIRECTORIO':
+    case 'FORMATO DIRECTORIO EXCEL':
+      if (!docenteResponsable || !mesEntrega) {
+        window.alert('Por favor, completa todos los campos obligatorios.');
+        return;
+      }
+      break;
+    case 'FORMATO TALLA & PESO':
+    case 'FORMATO CUENTAME':
+      if (!docenteResponsable) {
+        window.alert('Por favor, completa todos los campos obligatorios.');
+        return;
+      }
+      break;
+      case 'RAM':
+      case 'FORMATO DIRECTORIO EXCEL':
+      if (!docenteResponsable || !documentoResponsable || !telefonoResponsableUds || !mesEntrega) {
+        window.alert('Por favor, completa todos los campos obligatorios.');
+        return;
+      }
+      break;
+    case 'AAVN':
+    case 'FORMATO BIENESTARINA EXCEL':
+      if (!docenteResponsable || !telefonoResponsableUds || !mesEntrega || !dateDeEntregaCompleta || !codigoAAVN) {
+        window.alert('Por favor, completa todos los campos obligatorios.');
+        return;
+      }
+      break;
   }
 
 
